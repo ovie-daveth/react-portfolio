@@ -19,7 +19,7 @@ module.exports = {
         // Dark theme colors
         dark: {
           sidebar: "#1e2a3a", // Dark theme sidebar color
-          background: "#121212", // Dark background color
+          background: "#111821", // Dark background color
           textBold: "#ffffff",  // Light text for dark theme
           textLight: "#d1d1d1", // Slightly lighter text for dark theme
         },

@@ -1,38 +1,18 @@
 import React from 'react'
-import {BsTwitter, BsFacebook, BsLinkedin, BsGithub, BsDiscord} from "react-icons/bs"
 import {Link} from "react-router-dom";
+import { socials } from '../constant';
+import { menus } from '../constant';
+import { BsMoonStars } from 'react-icons/bs';
+import { useTheme } from '../states/themeActions';
 
 const SideBar = () => {
 
-  const socials = [
-    {
-      id: 1,
-      href: "",
-      icon: <BsTwitter />
-    },
-    {
-      id: 2,
-      href: "",
-      icon: <BsFacebook />
-    },
-    {
-      id: 3,
-      href: "",
-      icon: <BsDiscord />
-    },
-    {
-      id: 4,
-      href: "",
-      icon: <BsGithub />
-    },
-    {
-      id: 5,
-      href: "",
-      icon: <BsLinkedin />
-    },
-  ]
+
+  const { theme, toggleTheme, isLightTheme } = useTheme();
+
+
   return (
-    <div className={`dark:bg-sidebar_dark bg-sidebar_green w-full h-full dark:text-textBold text-dark-textBold px-2`}>
+    <div className={`dark:bg-dark-sidebar bg-sidebar_green w-full h-full dark:text-white text-dark-textBold px-2`}>
         <div className='flex flex-col items-center'>
               <div className='mt-7 flex flex-col gap-4 items-center text-center'>
                   <h2 className='text-xl font-bold ml-2'>O. O David</h2>
@@ -44,13 +24,36 @@ const SideBar = () => {
               <div className='flex items-center gap-3 mt-5'>
                 {
                   socials.map((item, index) => (
-                    <div key={index} className='dark:bg-sidebar_green bg-white text-sidebar_green h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95'>
+                    <div key={index} className='dark:bg-sidebar_green bg-white dark:text-white text-sidebar_green h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95'>
                   <Link to={item.href}>
                   {item.icon}
                   </Link>
                 </div>
                   ))
                 }
+              </div>
+              <div className='flex flex-col items-start mt-12 gap-4'>
+              {
+                  menus.map((item, index) => (
+                    <div key={index} className={` flex justify-center cursor-pointer hover:scale-95 ${index === 0 && "text-textLight dark:text-sidebar_green"}`}>
+                  <Link to={item.href} className='flex items-center gap-2'>
+                      <span className='text-lg'>{item.icons}</span>
+                      <span>{item.menu}</span>
+                  </Link>
+                </div>
+                  ))
+                }
+              </div>
+              <div className='mt-10'>
+                <button className='bg-[#0000004D] dark:bg-sidebar_green px-8 py-3 rounded-md hover:scale-95'>
+                  Hire me
+                </button>
+              </div>
+              <div className='mt-10 text-center flex items-center flex-col'>
+                <h3 className='flex gap-2 items-center text-lg'><span><BsMoonStars /> </span>Theme</h3>
+                  <div className='relative mt-3 w-[70px] h-8 bg-transparent border-white/50 border-[2px] rounded-3xl cursor-pointer' onClick={toggleTheme}>
+                    <div className={`absolute bg-sidebar_green h-[95%] w-[50%] ${isLightTheme ? "right-0" : "left-0"} shadow-lg drop-shadow-lg rounded-full`}></div>
+                  </div>
               </div>
         </div>
     </div>
