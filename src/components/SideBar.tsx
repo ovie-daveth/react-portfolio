@@ -24,7 +24,7 @@ const SideBar = () => {
               <div className='flex items-center gap-3 mt-5'>
                 {
                   socials.map((item, index) => (
-                    <div key={index} className='dark:bg-sidebar_green bg-white dark:text-white text-sidebar_green h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95'>
+                    <div key={index} className='bg-[#0000004D] dark:bg-sidebar_green text-white dark:text-white h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95'>
                   <Link to={item.href}>
                   {item.icon}
                   </Link>
