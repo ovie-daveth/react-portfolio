@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../atoms/Button.tsx'
+import { Stacks } from '../../constant.js'
 
 const About = () => {
 
@@ -14,15 +15,24 @@ const About = () => {
         </div>
         <div className='grid grid-cols-4 gap-x-5 gap-y-10 mt-16'>
             {
-                Array(1,2,3,4,5,6,7).map((_, i) => (
+                Stacks.map((item, i) => (
                     <div key={i} className='flex flex-col gap-2'>
                         <div>
-                            <div className='bg-sidebar_green  h-9 w-9 text-textBold relative rounded-sm'>
+                            {item.icons ? <div className='flex items-center gap-2'>
+                                {
+                                    item.icons.map((item, index) => (
+                                        <div key={index} className=' w-7 h-7'>
+                                            <img className='w-full h-full' src={item} alt="icons" />
+                                        </div>
+                                    ))
+                                }
+                            </div> : <div className='bg-sidebar_green  h-9 w-9 text-textBold relative rounded-sm'>
                                 <p className='absolute -bottom-1 right-1 text-lg '>JS</p>
+                            </div>}
+                            <p className='mt-2 text-textBold dark:text-dark-textBold'>{item.title}</p>
                             </div>
-                            <p className='mt-2 text-textBold dark:text-dark-textBold'>Vanilla Javascript</p>
-                            </div>
-                        <p className='text-sm font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus rerum dolorem rem? minima quos <a className='text-white hover:underline' href="/">libero quia</a> autem nam? Nesciunt, eaque.</p>
+                        <p className='text-sm font-normal text-textLight dark:text-dark-textLight' dangerouslySetInnerHTML={{ __html: item.desc }}>    
+                        </p>
                     </div>
                 ))
             }

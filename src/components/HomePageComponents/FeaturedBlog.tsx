@@ -6,7 +6,7 @@ import { BsArrowRightCircleFill } from 'react-icons/bs'
 const FeaturedBlog = () => {
 
   const goToPortBlog = () => {
-    
+
   }
   return (
     <div>
@@ -15,7 +15,7 @@ const FeaturedBlog = () => {
         <div className='mt-16 grid grid-cols-3 gap-x-5'>
           {
             [Array(1,2,3).map((_, i) => (
-              <BlogCard key={i} />
+              <BlogCard key={i} index={i} />
             ))]
           }
         </div>

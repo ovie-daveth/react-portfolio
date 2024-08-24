@@ -1,12 +1,15 @@
 import React from 'react'
 import { BsEye } from 'react-icons/bs'
+import code from '../../assets/cssframe.jpg'
+import css from "../../assets/frame.jpg"
+
 
 const ProjectCard = ({index}) => {
   return (
     <div className={`dark:bg-dark-card_bg bg-card_bg h-[200px] relative before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:bg-transparent  hover:before:bg-black/30 hover:dark:before:bg-black/50 group transition-all before:transition-all before:ease-in-out before:duration-500`}>    
         <div className='w-full h-full flex items-start gap-8'>
-            <div className={`${index % 3 == 0 ? "bg-sidebar_orange" : "bg-sidebar_green"} h-full w-[40%]`}>
-                <img src="" alt="" />
+            <div className={` h-full w-[40%]`}>
+                <img src={index % 3 == 1 ? code : css} alt="" />
             </div>
             <div className='py-3 w-[50%]'>
                 <h3 className='dark:text-white underline text-textLight'>Project Heading</h3>

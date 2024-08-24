@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../atoms/Button.tsx'
 import { BsArrowRightCircle } from 'react-icons/bs'
-
+import home from "../../assets/home_3.jpg"
 
 const Intro = () => {
 
@@ -30,8 +30,8 @@ const Intro = () => {
                   </div>
                 </div>
               </div>
-              <div className='w-[28%] h-[350px] bg-white/50'>
-                <img src="" alt="" />
+              <div className='w-[28%] h-[350px] bg-white/50 rounded-md'>
+                <img className='rounded-md' src={home} alt="" />
               </div>
           </div>
   )
