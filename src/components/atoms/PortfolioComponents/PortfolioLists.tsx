@@ -22,7 +22,7 @@ const PortfolioLists = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-center mt-10 gap-10 font-normal text-gray-400 dark:text-textLight'>
+      <div className='flex items-center justify-center mt-10 gap-10 font-normal text-gray-400 dark:text-dark-textLight'>
         {ListItems.map((item) => (
           <button
             onClick={() => selectCategory(item.id)}

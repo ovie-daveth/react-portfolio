@@ -14,7 +14,7 @@ const Layout = ({children, theme} : LayoutType) => {
                 <SideBar />
             </div>
              {/* Main space */}
-             <div className='right-0 left-[280px] min-h-screen absolute dark:bg-dark-background dark:text-gray-400'>
+             <div className='absolute left-[280px] w-full min-h-screen dark:bg-dark-background dark:text-gray-400'>
                 {children}
              </div>
         </div>

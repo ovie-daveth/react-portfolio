@@ -31,7 +31,7 @@ const About = () => {
                             </div>}
                             <p className='mt-2 text-textBold dark:text-dark-textBold'>{item.title}</p>
                             </div>
-                        <p className='text-sm font-normal text-textLight dark:text-dark-textLight' dangerouslySetInnerHTML={{ __html: item.desc }}>    
+                        <p className='text font-normal text-textLight dark:text-dark-textLight' dangerouslySetInnerHTML={{ __html: item.desc }}>    
                         </p>
                     </div>
                 ))

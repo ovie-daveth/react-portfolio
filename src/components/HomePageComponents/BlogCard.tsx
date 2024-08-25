@@ -11,7 +11,7 @@ const BlogCard = ({index}) => {
       </div>
       <div className='mt-3 p-4'>
         <h2 className='text-textBold underline dark:text-white'>Top 3 JavaScript Frameworks</h2>
-        <p className='font-normal text-sm mt-3 text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, accusamus incidunt. Enim nobis dicta perferendis.</p>
+        <p className='font-normal text mt-3 text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, accusamus incidunt. Enim nobis dicta perferendis.</p>
         <a className='flex items-center gap-3 text-sidebar_green mt-3 hover:underline w-fit' href="">Read More <span><BsArrowRight /></span></a>
         <small className='text-textLight dark:text-dark-textLight font-light '>Published {4} min ago</small>
       </div>

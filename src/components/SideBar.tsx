@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Link} from "react-router-dom";
 import { socials } from '../constant';
 import { menus } from '../constant';
-import { BsMoonStars } from 'react-icons/bs';
+import { BsMoonStars, BsSend } from 'react-icons/bs';
 import { useTheme } from '../states/themeActions';
 import home from "../assets/home_4.jpg";
 const SideBar = () => {
@@ -50,8 +50,9 @@ const SideBar = () => {
                 }
               </div>
               <div className='mt-10'>
-                <button className='bg-[#0000004D] dark:bg-sidebar_green px-8 py-3 rounded-md hover:scale-95'>
-                  Hire me
+                <button className='bg-[#0000004D] dark:bg-sidebar_green px-8 py-3 rounded-md hover:scale-95 flex items-center gap-2'>
+                  <span><BsSend /></span>
+                  <span>Hire me</span>
                 </button>
               </div>
               <div className='mt-10 text-center flex items-center flex-col'>
