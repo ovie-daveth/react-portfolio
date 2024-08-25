@@ -22,7 +22,7 @@ body{
   }
 
 .header{
-    @apply text-3xl dark:text-white relative before:absolute before:-left-6 before:top-0 before:h-full before:w-2 before:bg-sidebar_green
+    @apply md:text-3xl text-xl dark:text-white relative before:absolute before:-left-6 before:top-0 before:h-full before:w-2 before:bg-sidebar_green
 }
 .container{
     @apply px-40 py-12
