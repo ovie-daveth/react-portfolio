@@ -69,7 +69,7 @@ export const menus = [
         id: 5,
         href: "/contact",
         icons: <BsMailbox2 />,
-        menu: "About me"
+        menu: "Contact me"
     },
 ]
 
@@ -119,3 +119,11 @@ export const Stacks = [
 
 
 ]
+
+export const ListItems = [
+  { id: 1, title: 'All' },
+  { id: 2, title: 'Tutorials' },
+  { id: 3, title: 'News' },
+  { id: 4, title: 'Articles' },
+  { id: 5, title: 'Openings' },
+];

@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import ProjectCard from '../../HomePageComponents/ProjectCard.tsx';
+import ProjectCard from '../HomePageComponents/ProjectCard.tsx';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-
-const ListItems = [
-  { id: 1, title: 'All' },
-  { id: 2, title: 'Web App' },
-  { id: 3, title: 'Mobile' },
-  { id: 4, title: 'Backend' },
-  { id: 5, title: 'Frontend' },
-];
+import { ListItems } from '../../constant.js';
 
 const PortfolioLists = () => {
   const [itemId, setItem] = useState(1);

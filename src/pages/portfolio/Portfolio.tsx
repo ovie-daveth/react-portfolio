@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../_layout.tsx'
 import Button from '../../components/atoms/Button.tsx'
-import PortfolioLists from '../../components/atoms/PortfolioComponents/PortfolioLists.tsx'
+import PortfolioLists from '../../components/PortfolioComponents/PortfolioLists.tsx'
 
 const Portfolio = () => {
 

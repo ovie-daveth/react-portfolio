@@ -33,3 +33,20 @@ body{
     @apply transition-all ease-in-out duration-500 
 }
 
+/* Add these styles to your global CSS */
+code {
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  pre {
+    background-color: #2d2d2d;
+    padding: 16px;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    overflow-x: auto;
+  }
+  
