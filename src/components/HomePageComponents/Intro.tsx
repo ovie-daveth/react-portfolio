@@ -11,8 +11,8 @@ const Intro = () => {
 
 
   return (
-    <div className='flex items-start gap-5 dark:border-b dark:border-[#112801] dark:shadow-lg dark:drop-shadow-lg container'>
-              <div className='w-[70%] flex flex-col gap-10'>
+    <div className='flex items-start flex-col-reverse md:flex-row gap-5 dark:border-b dark:border-[#112801] dark:shadow-lg dark:drop-shadow-lg container'>
+              <div className='md:w-[70%] flex flex-col gap-10'>
                 <div className='flex flex-col gap-1'>
                   <h2 className='text-3xl text-textBold dark:text-dark-textBold'>Omokefe O. David</h2>
                   <h4 className='text-lg font-normal'>Senior software engineer</h4>
@@ -22,16 +22,16 @@ const Intro = () => {
                   <div className='mt-10 flex items-center gap-4'>
                     <Button type="button" className='bg-sidebar_green text-white border-border_green' action={GotoPortfolio}>
                       <span className='text-lg'><BsArrowRightCircle /></span>
-                      <span>View Portfolio</span>
+                      <span>Portfolio</span>
                     </Button>
                     <Button type="button" className='bg-[#2f435c] text-white border-[#2f315c]' action={GotoPortfolio}>
-                      <span>View Resume</span>
+                      <span>Resume</span>
                     </Button>
                   </div>
                 </div>
               </div>
-              <div className='w-[28%] h-[350px] bg-white/50 rounded-md'>
-                <img className='rounded-md' src={home} alt="" />
+              <div className='md:w-[28%] h-[350px] bg-white/50 rounded-md'>
+                <img className='rounded-md w-full h-full' src={home} alt="" />
               </div>
           </div>
   )

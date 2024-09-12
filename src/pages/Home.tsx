@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <Layout theme={false}>
-        <div className=''>
+        <div className='md:mt-[unset] mt-10'>
             <Intro />
             <About />
             <Testimonial />
