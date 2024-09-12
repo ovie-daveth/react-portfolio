@@ -17,10 +17,10 @@ const SideBar = () => {
   }, [window.location.pathname])
 
   return (
-    <div className={`dark:bg-dark-sidebar bg-sidebar_green w-full h-full dark:text-white text-dark-textBold px-2 pt-3`}>
+    <div className={`dark:bg-dark-sidebar bg-sidebar_green w-full h-full dark:text-white text-dark-textBold px-2 pt-3 pb-10`}>
         <div className='flex flex-col items-center'>
               <div className='mt-7 flex flex-col gap-4 items-center text-center'>
-                  <h2 className='text-xl font-bold ml-1'>O. O David</h2>
+                  <h2 className='text-xl font-bold ml-1 hidden md:block'>O. O David</h2>
                   <div className='w-36 h-32  rounded-full bg-white/50'>
                     <img className='w-full h-full rounded-full object-cover' src={home} alt="" />
                   </div>

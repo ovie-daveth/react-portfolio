@@ -2,17 +2,19 @@ import React from 'react'
 import BlogCard from './BlogCard.tsx'
 import Button from '../atoms/Button.tsx'
 import { BsArrowRightCircleFill } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const FeaturedBlog = () => {
 
+  const nav = useNavigate();
   const goToPortBlog = () => {
-
+    nav("/blog")
   }
   return (
     <div>
       <div className='container'>
         <h1 className='header'>Latest Blogs</h1>
-        <div className='mt-16 grid grid-cols-3 gap-x-5'>
+        <div className='mt-16 grid lg:grid-cols-3 grid-cols-2 gap-x-5 gap-y-5'>
           {
             [Array(1,2,3).map((_, i) => (
               <BlogCard key={i} index={i} />

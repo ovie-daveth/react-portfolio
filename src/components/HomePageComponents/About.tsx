@@ -13,7 +13,7 @@ const About = () => {
             <h1 className='header'>What I do</h1>
             <p className='mt-6 font-normal text-textLight dark:text-dark-textLight'>I have more than 5 years' experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my <a className='text-sidebar_green hover:underline' href="/">online resume</a> and project <a className='text-sidebar_green hover:underline' href="/">portfolio</a>.</p>
         </div>
-        <div className='grid grid-cols-4 gap-x-5 gap-y-10 mt-16'>
+        <div className='grid lg:grid-cols-4 grid-cols-3 gap-x-5 gap-y-10 mt-16'>
             {
                 Stacks.map((item, i) => (
                     <div key={i} className='flex flex-col gap-2'>
