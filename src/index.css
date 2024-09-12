@@ -49,4 +49,6 @@ code {
     font-family: 'Fira Code', monospace;
     overflow-x: auto;
   }
-  
+  .borderRadius{
+    border-radius: 8px;
+  }

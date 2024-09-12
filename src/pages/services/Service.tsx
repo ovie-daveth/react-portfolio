@@ -3,6 +3,7 @@ import Layout from '../../_layout.tsx'
 import Button from '../../components/atoms/Button.tsx'
 import HireMe from '../../components/HireMe.tsx'
 import Accordions from '../../components/atoms/Accordions.tsx'
+import { faqs } from '../../constant.js'
 
 
 const Service = () => {
@@ -32,28 +33,58 @@ const Service = () => {
                   </thead>
                   <tbody className='font-light text-sm'>
                     <tr>
-                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Package Price</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>$500</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>$1000</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>$2000</td>
+                      <td className='px-2 border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg w-[450px] font-semibold'>Package Price (negotiable)</td>
+                      <td className='px-2  border-r-[1.3px] h-20 text-2xl font-bold'>$10/hr</td>
+                      <td className='px-2  border-r-[1.3px] h-20 text-2xl font-bold'>$20/hr</td>
+                      <td className='px-2  border-r-[1.3px] h-20 text-2xl font-bold'>$50/hr</td>
                     </tr>
                     <tr>
-                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg font-semibold'>Development Hours</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Up to 10 hours of work per week</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Up to 20 hours of work per week</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Full time availability</td>
                     </tr>
                     <tr>
-                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Project Type</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Bug fixes, enhancements, adding minor new features</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Mid sized features to full application development</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Full application development</td>
                     </tr>
                     <tr>
-                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
-                      <td className='px-2  border-r-[1.3px] h-20'>Basic</td>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Support</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Basic email support (48h response)</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Priority email support(24h response)</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Full time dedicated support</td>
+                    </tr>
+                    <tr>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Revisions</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>1 round revisions</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>2 round revisions</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Unlimited revisions</td>
+                    </tr>
+                    <tr>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Delivery Time</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>2-4 weeks</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>1-3 weeks</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Based on need</td>
+                    </tr>
+                    <tr>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Consultation</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>One 30 min consultation</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>one 1-hour consultation</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Unlimited consultaion sessions</td>
+                    </tr>
+                    <tr>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Remote/On-site</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Remote only</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Remote with occasional video calls</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Full remote with live collaboration sessions</td>
+                    </tr>
+                    <tr>
+                      <td className='px-2  border-r-[1.3px] h-20  bg-card_bg dark:bg-dark-card_bg'>Project management tools</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Email communication</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Email & project management tools (e.g. Trello)</td>
+                      <td className='px-2  border-r-[1.3px] h-20'>Full management via PM tools (slack, Jira, Azure for developers etc)</td>
                     </tr>
                   </tbody>
               </table>   
@@ -61,12 +92,12 @@ const Service = () => {
             <div className='mt-20'>
               <div className='text-center  w-[60%] mx-auto'>
               <h1>FAQs</h1>
-              <p className='text-textLight dark:text-dark-textLight text-sm font-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ab non hic ea rem perferendis nostrum saepe repellat perspiciatis ratione!</p>
+              <p className='text-textLight dark:text-dark-textLight text-sm font-light'>In case of further clarifications and help, the following questions further speaks into the above services. If still not clear <a className='text-sidebar_green hover:underline' href="/contact">contact me</a> </p>
               </div>
               <div className='mt-10'>
                 {
-                  [1,2,3,4,5,6].map((_, i) => (
-                    <Accordions key={i} question='lorem ipsum dandan' answer='lorem lorem ipsum ipsaum rutim laran ipuy tyhh opsal kuma trum nao pawartyp oipytw gposiyu lorem lorem ipsum ipsaum rutim laran ipuy tyhh opsal kuma trum nao pawartyp oipytw gposiyu' />
+                  faqs.map((item, i) => (
+                    <Accordions key={i} question={item.question}  answer={item.answer}/>
                    
                   ))
                 }
