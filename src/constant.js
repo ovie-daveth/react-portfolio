@@ -11,6 +11,7 @@ import sassicon from "./assets/sass.png"
 import htmlicon from "./assets/html.png"
 import cssicon from "./assets/css.png"
 import giticon from "./assets/git.png"
+import { Briefcase } from "lucide-react";
 
 export const socials = [
     {
@@ -61,12 +62,18 @@ export const menus = [
     },
     {
         id: 4,
-        href: "/blog",
-        icons: <BsSpeaker />,
-        menu: "Blog"
+        href: "/resume",
+        icons: <Briefcase />,
+        menu: "Resume"
     },
     {
-        id: 5,
+      id: 5,
+      href: "/blog",
+      icons: <BsSpeaker />,
+      menu: "Blog"
+  },
+    {
+        id: 6,
         href: "/contact",
         icons: <BsMailbox2 />,
         menu: "Contact me"

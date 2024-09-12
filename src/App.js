@@ -7,6 +7,7 @@ import ProductDetails from "./pages/portfolio/ProductDetails.tsx";
 import Blogs from "./pages/blogs/Blogs.tsx";
 import Contact from "./pages/contact/Contact.tsx";
 import WriteBlog from "./pages/blogs/WriteBlog.tsx";
+import BlogDetails from "./pages/blogs/BlogDetails.tsx";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path="/services" element={<Service />} />
       <Route path="/blog" element={<Blogs />} />
       <Route path="/blog/write" element={<WriteBlog />} />
-      {/* <Route path="/blog/:id" element={<BlogDetail />} /> */}
+      <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
     </ThemeContextProvider>
