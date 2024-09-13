@@ -12,7 +12,7 @@ const FeaturedBlog = () => {
   }
   return (
     <div>
-      <div className='container'>
+      <div className='container_all'>
         <h1 className='header'>Latest Blogs</h1>
         <div className='mt-16 grid lg:grid-cols-3 md:grid-cols-2 gap-x-5 gap-y-5 px-2 md:px-[unset]'>
           {

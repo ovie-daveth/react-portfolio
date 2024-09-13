@@ -10,7 +10,7 @@ type ButtonProp = {
 }
 const Button = ({className, action, children, type} : ButtonProp) => {
   return (
-    <button onClick={action} type={type}  className={cn(className, "flex items-center py-3 px-5 gap-3 rounded-md border-b-4  border-l-2 active:border-0")}>
+    <button onClick={action} type={type}  className={cn(className, "flex items-center md:py-3 py-2 px-5 gap-3 rounded-md border-b-4  border-l-2 active:border-0")}>
       {children}
     </button>
   )

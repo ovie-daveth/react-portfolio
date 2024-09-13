@@ -13,7 +13,7 @@ const Service = () => {
   }
   return (
     <Layout theme={false}>
-        <div className='container'>
+        <div className='container_all'>
             <div className='flex items-center justify-center flex-col text-center w-[70%] mx-auto'>
                 <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Services & Pricings</h1>
                 <p className='text font-light'>This is my service breakdown. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>

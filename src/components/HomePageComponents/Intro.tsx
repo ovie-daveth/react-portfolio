@@ -11,8 +11,8 @@ const Intro = () => {
 
 
   return (
-    <div className='flex items-start flex-col-reverse md:flex-row gap-5 dark:border-b dark:border-[#112801] dark:shadow-lg dark:drop-shadow-lg container'>
-              <div className='md:w-[70%] flex flex-col gap-10'>
+    <div className='flex items-start flex-col-reverse md:flex-row gap-5 dark:border-b dark:border-[rgb(17,40,1)] dark:shadow-lg dark:drop-shadow-lg container_all'>
+              <div className='xl:w-[70%] lg:w-full md:w-[60%] flex flex-col gap-10'>
                 <div className='flex flex-col gap-1'>
                   <h2 className='text-3xl text-textBold dark:text-dark-textBold'>Omokefe O. David</h2>
                   <h4 className='text-lg font-normal'>Senior software engineer</h4>
@@ -30,7 +30,7 @@ const Intro = () => {
                   </div>
                 </div>
               </div>
-              <div className='md:w-[28%] h-[350px] bg-white/50 rounded-md'>
+              <div className='xl:w-[28%] lg:-[35%] xl:block lg:hidden md:block block h-[350px] bg-white/50 rounded-md'>
                 <img className='rounded-md w-full h-full' src={home} alt="" />
               </div>
           </div>

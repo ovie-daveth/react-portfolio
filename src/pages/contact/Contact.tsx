@@ -18,7 +18,7 @@ const Contact = () => {
     <Layout theme={false}>
         <div className=' font-light'>
           <div className='bg-gray-50 dark:bg-dark-background'>
-            <div className='flex items-center justify-center flex-col text-center container'>
+            <div className='flex items-center justify-center flex-col text-center container_all'>
             <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Contact Me</h1>
                   <p className='text text-textLight dark:text-dark-textLight w-[80%]'>Interested in hiring me for your project, or you want a CTO or a co-founder or just want to say hi? You can fill in the contact form below or send me an email to <a href="mailto:davethsite@gmail.com" target='_blank'>here</a></p>
                   <p className='mt-4 text-textLight dark:text-dark-textLight'>Want to get connected? Follow me on the social channels below.</p>

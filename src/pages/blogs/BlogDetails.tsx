@@ -12,7 +12,7 @@ const BlogDetails = () => {
     }
   return (
     <Layout theme={false}>
-      <div className='container'>
+      <div className='container_all'>
             <div className='mx-auto w-[65%]'>
                 <div className='flex flex-col gap-0'>
                     <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Why Every Developer Should Have A Blog</h1>

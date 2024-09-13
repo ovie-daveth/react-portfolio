@@ -10,10 +10,10 @@ const Portfolio = () => {
     }
   return (
     <Layout theme={false}>
-        <div className='container'>
-            <div className='flex items-center justify-center flex-col text-center w-[70%] mx-auto'>
+        <div className='container_all'>
+            <div className='flex items-center justify-center flex-col text-center md:w-[70%] w-full mx-auto'>
                 <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Portfolio</h1>
-                <p className='text font-light'>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>
+                <p className='text font-light'>This is my portfolio. I add more projects as they come. These projects includes both personal and client's project (the ones permitted to be shared).</p>
                 <Button className='bg-sidebar_green text-white border-border_green mt-5' type="submit" action={goToContact}>
                     Hire me
                 </Button>

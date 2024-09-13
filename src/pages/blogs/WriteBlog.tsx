@@ -47,7 +47,7 @@ const WriteBlog = () => {
     }
   return (
     <Layout theme={false}>
-        <div className='container'>
+        <div className='container_all'>
             <form>
                 <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>New Blog post</h1>
                 <div className='flex items-center gap-4 mt-12'>

@@ -7,7 +7,7 @@ const Testimonial = () => {
 const scrollRef = useAutoScroll(400, 8000);
 
   return (
-    <div className='container'>
+    <div className='container_all'>
         <div>
             <h1 className='header'>Testimonial</h1>
             <div ref={scrollRef} className='overflow-x-scroll scroll mt-16' >

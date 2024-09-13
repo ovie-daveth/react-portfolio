@@ -9,10 +9,10 @@ const FeatureProjects = () => {
 
     }
   return (
-    <div className='container'>
+    <div className='container_all'>
       <div className='flex flex-col justify-center'> 
         <h1 className='header'>Featured Project</h1>
-        <div className='mt-16 grid lg:grid-cols-2 gap-x-8 gap-y-6 px-2 md:px-[unset]'>
+        <div className='mt-16 grid md:grid-cols-2 gap-x-8 gap-y-6 px-2 md:px-[unset]'>
             {
                 [Array(1,2,3,4,5,).map((_, i) => (
                     <ProjectCard key={i} index={i} />

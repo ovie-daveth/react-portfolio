@@ -8,7 +8,7 @@ import HireMe from '../../components/HireMe.tsx'
 const ProductDetails = () => {
   return (
    <Layout theme={false}>
-      <div className='container'>
+      <div className='container_all'>
       <div className='flex items-center justify-center flex-col text-center w-[70%] mx-auto'>
                 <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Case Study: Project Name</h1>
                 <p className='text font-light  text-textLight dark:text-dark-textLight'>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>
