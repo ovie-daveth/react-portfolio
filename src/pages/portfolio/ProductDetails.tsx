@@ -9,36 +9,36 @@ const ProductDetails = () => {
   return (
    <Layout theme={false}>
       <div className='container_all'>
-      <div className='flex items-center justify-center flex-col text-center w-[70%] mx-auto'>
-                <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Case Study: Project Name</h1>
-                <p className='text font-light  text-textLight dark:text-dark-textLight'>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>
+      <div className='flex items-center justify-center flex-col text-center md:w-[70%] mx-auto'>
+          <h1 className='font-bold md:text-3xl text-xl dark:text-white text-textBold mb-3'>Case Study: Project Name</h1>
+          <p className='text-sm md:text-[16px] font-light  text-textLight dark:text-dark-textLight'>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>
                
       </div>
-      <div className='mt-20'>
+      <div className='mt-20'> 
           <PortfolioTheme />
       </div>
       <div className='mt-20'>
-        <h3 className='text-2xl text-textBold dark:text-dark-textBold font-semibold mb-2'>Project Overview</h3>
-        <p className='text font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+        <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>Project Overview</h3>
+        <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
       </div>
       <div className='mt-20'>
-        <h3 className='text-2xl text-textBold dark:text-dark-textBold font-semibold mb-2'>The challenge</h3>
-        <p className='text font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+        <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The challenge</h3>
+        <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
       </div>
       <div className='mt-20'>
-        <h3 className='text-2xl text-textBold dark:text-dark-textBold font-semibold mb-2'>The Approach & Solution</h3>
-        <p className='text font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+        <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The Approach & Solution</h3>
+        <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
         <div className='grid grid-cols-2 gap-2 mt-5'>
           <img src={project} alt="work" className='object-cover w-full' />
           <img src={project} alt="work" className='object-cover w-full' />
         </div>
         <div className='mt-4'>
-          <p className='text font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+          <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
         </div>
       </div>
       <div className='mt-16'>
-      <h3 className='text-2xl text-textBold dark:text-dark-textBold font-semibold mb-2'>The Results</h3>
-      <div className='grid grid-cols-3 gap-5'>
+      <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The Results</h3>
+      <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
         {
           [Array(1,2,3).map((_, i) => (
             <div className='py-5 px-5 rounded-md dark:bg-dark-card_bg bg-card_bg'>
@@ -46,15 +46,15 @@ const ProductDetails = () => {
               <h1 className='text-5xl mb-6 dark:text-white'>
                 20%
               </h1>
-              <small>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</small>
+              <small className='text-textLight dark:text-dark-textLight font-light'>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</small>
           </div>
           ))]
         }
       </div>
-      <p className='mt-6 text font-normal'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit maiores ut fuga tenetur, totam saepe ea sint voluptate nam omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est necessitatibus fugiat sunt perferendis quo repellat perspiciatis voluptatem illum cumque explicabo. Earum qui eum facilis dignissimos magni itaque ea, animi reprehenderit? Nostrum corporis accusantium provident labore, nulla quo! Harum, mollitia impedit?</p>
+      <p className='mt-6 text-sm md:text-[16px] font-normal'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit maiores ut fuga tenetur, totam saepe ea sint voluptate nam omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est necessitatibus fugiat sunt perferendis quo repellat perspiciatis voluptatem illum cumque explicabo. Earum qui eum facilis dignissimos magni itaque ea, animi reprehenderit? Nostrum corporis accusantium provident labore, nulla quo! Harum, mollitia impedit?</p>
       </div>
       <div className='mt-16'>
-        <h3 className='text-2xl text-textBold dark:text-dark-textBold font-semibold mb-2'>Client's Testimonial</h3>
+        <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>Client's Testimonial</h3>
         <TestimonialCard />
       </div>
       <div className='mt-16'>

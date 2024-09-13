@@ -26,7 +26,7 @@ const PortfolioLists = () => {
           </button>
         ))}
       </div>
-      <div className='mt-8 grid md:grid-cols-2 lg:gap-x-8 gap-x-5 gap-y-6 px-2 md:px-[unset]'>
+      <div className='mt-8 grid md:grid-cols-2 lg:gap-x-8 gap-x-2 gap-y-2 px-2 md:px-[unset]'>
         {
           [Array(1,2,3,4,5,).map((_, i) => (
             <ProjectCard key={i} index={i} />
