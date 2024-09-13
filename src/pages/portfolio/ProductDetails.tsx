@@ -9,23 +9,23 @@ const ProductDetails = () => {
   return (
    <Layout theme={false}>
       <div className='container_all'>
-      <div className='flex items-center justify-center flex-col text-center md:w-[70%] mx-auto'>
+      <div className='flex items-center justify-center flex-col text-center md:w-[70%] mx-auto text-textLight dark:text-dark-textLight font-light'>
           <h1 className='font-bold md:text-3xl text-xl dark:text-white text-textBold mb-3'>Case Study: Project Name</h1>
           <p className='text-sm md:text-[16px] font-light  text-textLight dark:text-dark-textLight'>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?</p>
                
       </div>
-      <div className='mt-20'> 
+      <div className='md:mt-20 mt-10'> 
           <PortfolioTheme />
       </div>
-      <div className='mt-20'>
+      <div className='md:mt-20 mt-10'>
         <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>Project Overview</h3>
         <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
       </div>
-      <div className='mt-20'>
+      <div className='md:mt-20 mt-10'>
         <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The challenge</h3>
         <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
       </div>
-      <div className='mt-20'>
+      <div className='md:mt-20 mt-10'>
         <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The Approach & Solution</h3>
         <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
         <div className='grid grid-cols-2 gap-2 mt-5'>
@@ -38,7 +38,7 @@ const ProductDetails = () => {
       </div>
       <div className='mt-16'>
       <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The Results</h3>
-      <div className='grid md:grid-cols-3 grid-cols-2 gap-5'>
+      <div className='flex flex-wrap gap-5'>
         {
           [Array(1,2,3).map((_, i) => (
             <div className='py-5 px-5 rounded-md dark:bg-dark-card_bg bg-card_bg'>

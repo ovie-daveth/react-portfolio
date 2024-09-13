@@ -1,11 +1,13 @@
 import React from 'react'
 import Button from '../atoms/Button.tsx'
 import { Stacks } from '../../constant.js'
+import { useNavigate } from 'react-router-dom'
 
 const About = () => {
-
+    
+    const nav = useNavigate();
     const navigateTo = () => {
-
+        nav("/services")
     }
   return (
     <div className='container_all'>

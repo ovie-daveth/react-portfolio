@@ -26,7 +26,7 @@ const ProjectCard = ({index}) => {
                 </div>
             </div>
         </div>
-        <button onClick={() => gotoProjectDetails(index)} className='hidden items-center gap-3 absolute top-[40%] lg:left-[50%] md:left-[18%] left-[28%] bg-border_green dark:bg-dark-sidebar py-2 px-4 rounded-lg text-white group-hover:flex hover:bg-border_green active:scale-95 transition_all'>
+        <button onClick={() => gotoProjectDetails(index)} className='hidden items-center gap-3 absolute md:top-[40%] top-[36%] lg:left-[50%] md:left-[18%] left-[40%] bg-border_green dark:bg-dark-sidebar py-2 px-4 rounded-lg text-white group-hover:flex hover:bg-border_green active:scale-95 transition_all'>
             <span className='text-xl'><BsEye /></span>
             <span className='text-sm hidden md:block'>View case study</span>
         </button>
