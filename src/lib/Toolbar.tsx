@@ -23,7 +23,7 @@ const Toolbar = ({ editor }: Props) => {
   }
 
   return (
-    <div className="flex p-1 border border-input bg-transparent rounded-md w-full text-sm">
+    <div className="flex p-1 border border-input bg-transparent rounded-md w-full text-sm overflow-x-scroll scroll">
       {/* Heading 2 */}
       <Toggle
         size="sm"
