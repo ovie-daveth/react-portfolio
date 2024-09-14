@@ -43,7 +43,7 @@ const Tiptap = ({ description, onChange, name }: EditorProps) => {
       {/* Toolbar with rich text actions */}
       <Toolbar editor={editor} />
       {/* Editor content */}
-      <EditorContent editor={editor} name={name} />
+      <EditorContent className='' editor={editor} name={name} />
     </div>
   )
 }
