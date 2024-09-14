@@ -3,23 +3,28 @@ import { BsEye } from 'react-icons/bs'
 import code from '../../assets/cssframe.jpg'
 import css from "../../assets/frame.jpg"
 import { useNavigate } from 'react-router-dom'
+import useCardInView from '../../lib/useCardInView.ts'
 
 
 const BlogCard = ({index}) => {
 
     const navigate = useNavigate();
+    const { ref: CardRef, inView: CardInView } = useCardInView();
+    
     const gotoProjectDetails = (itemId: number) => {
         navigate(`/blog/${itemId}`);
         //window.location.replace(`//portfolio/${itemId}`);
     }
   return (
-    <div className={`dark:bg-dark-card_bg h-[280px] hover:h-full hover:z-50 overflow-hidden bg-card_bg relative before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:bg-transparent  hover:before:bg-black/20 hover:dark:before:bg-black/50 group transition-all before:transition-all before:ease-in-out before:duration-500`}>    
+    <div ref={CardRef} className={`dark:bg-dark-card_bg  hover:z-50 overflow-hidden bg-card_bg relative before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:bg-transparent  hover:before:bg-black/20 hover:dark:before:bg-black/50 group transition-all before:transition-all before:ease-in-out before:duration-500 duration-1000 ${
+      CardInView ? 'translate-x-0 opacity-100' : (index % 2 === 0 ? "translate-x-20 opacity-0" : "-translate-x-20 opacity-0")
+    }`}>    
         <div className='w-full h-full flex flex-col gap-8'>
-            <div className={` w-full`}>
-                <img className='object-cover w-full h-full' src={index % 3 == 1 ? code : css} alt="" />
+            <div className={` w-full h-full`}>
+                <img className='object-cover w-full h-[300px]' src={index % 3 == 1 ? code : css} alt="" />
             </div>
             <div className='py-3 px-2 w-full'>
-                <h3 className='dark:text-white underline text-textLight'>Project Heading</h3>
+                <h3 className='dark:text-white underline text-textLight'>Blog Heading</h3>
                 <p className='text mt-4 font-normal text-textLight dark:text-gray-400'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus nisi, consectetur voluptatem quibusdam.</p>
                 <div className='font-extralight text mt-4 dark:text-gray-400'>
                     <p>Client: Frost Ai</p>

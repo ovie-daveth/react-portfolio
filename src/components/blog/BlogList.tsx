@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import BlogCard from './BlogCard.tsx';
 import {ListItems} from "../../constant.js"
+import BlogCard from '../HomePageComponents/BlogCard.tsx';
 
 const BlogLists = () => {
   const [itemId, setItem] = useState(1);
@@ -15,7 +15,7 @@ const BlogLists = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-center mt-10 gap-10 font-normal text-gray-400 dark:text-dark-textLight'>
+      <div className='flex items-center justify-center mt-10 md:gap-10 gap-2 font-normal text-gray-400 dark:text-dark-textLight'>
         {ListItems.map((item) => (
           <button
             onClick={() => selectCategory(item.id)}
@@ -26,7 +26,7 @@ const BlogLists = () => {
           </button>
         ))}
       </div>
-      <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-5 mt-16'>
+      <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-x-4 gap-y-5 mt-16'>
         <TransitionGroup component={null}>
           {projects.map((project, index) => (
             <CSSTransition

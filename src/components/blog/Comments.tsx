@@ -1,5 +1,5 @@
 import { ArrowBigDown, ArrowRightSquare, Dot, FacebookIcon, Flag, Heart, Link2, Link2Icon, Linkedin, MessageCircle, MoveRight, ThumbsDown, ThumbsUp } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsDash, BsFacebook, BsGithub, BsGoogle, BsPass, BsPersonAdd, BsPersonFillAdd, BsTwitter, BsTwitterX } from 'react-icons/bs'
 
 const Comments = () => {
@@ -34,13 +34,34 @@ const Comments = () => {
     const Collapse = (num: number) => {
         setIsCollapsed(num)
     }
+
+    const [iconSize, setIconSize] = useState(15); // Default size
+
+    useEffect(() => {
+        const updateIconSize = () => {
+            const width = window.innerWidth;
+            if (width >= 1024) {
+                setIconSize(19); // Desktop size
+            } else if (width >= 768) {
+                setIconSize(19); // Tablet size
+            } else {
+                setIconSize(15); // Mobile size
+            }
+        };
+
+        window.addEventListener('resize', updateIconSize);
+        updateIconSize(); // Set initial size
+
+        return () => window.removeEventListener('resize', updateIconSize);
+    }, []);
+    
   return (
     <div className='mt-10'>
         <div className='flex items-center justify-between border-b-[4px] pb-2 relative'>
                         <p>{1} Comment</p>
                         <button onClick={ChooseLogin} className='flex items-center gap-1 font-light group relative'>  
                             <span className='group-hover:underline'>Login</span>
-                            <span><ArrowBigDown fill='black' size={16} /></span>
+                            <span><ArrowBigDown fill='black' size={iconSize} /></span>
                         </button>
                         <div className={`${isOpenLoginChoices ? "flex":"hidden"} flex-col gap-5 absolute md:top-8 top-10 right-0 bg-white shadow-md drop-shadow-md px-3 py-3 md:border-2 border-[1px] border-black rounded-r-lg rounded-l-md font-normal`} style={{borderTopRightRadius: "20px", borderTopLeftRadius: "5px", borderBottomRightRadius: "20px",}}>
                                 <button className='flex items-center gap-1 text-sm md:text-[14px]'>
@@ -62,7 +83,7 @@ const Comments = () => {
                         </div>
         </div>
         <div className='flex items-start gap-10 mt-7'>
-            <div className='bg-sidebar_green text-white py-3 px-4 rounded-lg text-3xl'>
+            <div className='bg-sidebar_green text-white md:py-3 py-1 md:px-4 px-2 rounded-lg md:text-3xl text-xl'>
                <p>G</p>
             </div>
             <textarea className='border-[1px] w-full h-[100px] rounded-3xl px-5 py-3 font-light outline-none' name="" id="" placeholder='Join the discussion...'></textarea>
@@ -72,33 +93,33 @@ const Comments = () => {
                <div className='flex items-center gap-4 '> 
                     <button onClick={handleFavouritePost}>
                         {
-                            isFavouritePost ? <Heart color='red' fill="red" /> : <Heart color='gray' />
+                            isFavouritePost ? <Heart size={iconSize} color='red' fill="red" /> : <Heart color='gray' size={iconSize} />
                         }
                     </button>
-                    <div className='flex items-center group relative'><Dot /><span>Share</span>
+                    <div className='flex items-center group relative text-sm md:text-[15px]'><Dot /><span>Share</span>
                         <div className='absolute flex items-center gap-4 left-20 w-0 group-hover:w-[300px] transition_all overflow-hidden'>
-                            <button className='hover:scale-95 transition_all'><BsTwitterX /></button>
-                            <button className='hover:scale-95 transition_all'><BsFacebook color='green' size={22} /></button>
-                            <button className='hover:scale-95 transition_all'><Linkedin color='blue' /></button>
-                            <button className='hover:scale-95 transition_all'><Link2Icon color='gray' /></button>
+                            <button className='hover:scale-95 transition_all'><BsTwitterX size={iconSize} /></button>
+                            <button className='hover:scale-95 transition_all'><BsFacebook color='green' size={iconSize} /></button>
+                            <button className='hover:scale-95 transition_all'><Linkedin size={iconSize} color='blue' /></button>
+                            <button className='hover:scale-95 transition_all'><Link2Icon size={iconSize} color='gray' /></button>
 
                         </div>
                     </div>
                </div>
-               <div className='flex items-center gap-2'>
+               <div className='flex items-center gap-2 text-sm md:text-[15px]'>
                     <span onClick={() => handleActiveComments(1)} className={`border-b-[2px] cursor-pointer ${active === 1 ? "border-sidebar_green text-sidebar_green":"border-transparent"}`}>Best</span>
                     <span onClick={() => handleActiveComments(2)} className={`border-b-[2px] cursor-pointer ${active === 2 ? "border-sidebar_green text-sidebar_green":"border-transparent"}`}>Newest</span>
                     <span onClick={() => handleActiveComments(3)} className={`border-b-[2px] cursor-pointer ${active === 3 ? "border-sidebar_green text-sidebar_green":"border-transparent"}`}>Oldest</span>
                </div>
             </div>
             <div className={` items-start gap-3 mt-10 ${isCollapsed === 1 ? "hidden" : "flex"}`}>
-                <div className='bg-sidebar_green text-white py-3 px-4 rounded-lg text-3xl'>
+                <div className='bg-sidebar_green text-white md:py-3 py-1 md:px-4 px-2 rounded-lg md:text-3xl text-xl'>
                 <p>B</p>
                 </div>
                 <div className='flex items-start justify-between'>
                     <div className='flex flex-col gap-2'>
                         <div className='flex items-center gap-1'>
-                            <p className='text-sidebar_green font-semibold'>omokefeoviedavid</p>
+                            <p className='text-sidebar_green font-semibold text-sm md:text-[15px]'>omokefeoviedavid</p>
                             <span className='font-bold text-xl'>
                                 {
                                     follow ? <BsPersonFillAdd color='gray'/> : <BsPass />
@@ -106,12 +127,12 @@ const Comments = () => {
                             </span>
                         </div>
                         <small className='-mt-2 text-[12px] font-normal'>2 years ago</small>
-                        <p className='text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam? Lorem ipsum dolor sit.</p>
+                        <p className='text-sm font-extralight md:font-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam? Lorem ipsum dolor sit.</p>
                         <div className='flex items-center gap-3 mt-3'>
                             <button className='flex items-center gap-2 cursor-pointer' onClick={handleFavouriteComment}>
                                 <span className=''>
                                     {
-                                        isFavouriteComments ? <ThumbsUp size={19} fill="green" color='green' /> : <ThumbsUp size={19} />
+                                        isFavouriteComments ? <ThumbsUp size={iconSize} fill="green" color='green' /> : <ThumbsUp size={iconSize} />
                                     }
                                 </span>
                                 <small>0</small>
@@ -119,16 +140,16 @@ const Comments = () => {
                             <button onClick={handleUnFavouriteComment} className='flex items-center gap-2'>
                                 <span>
                                     {
-                                        isUnFavouriteComments ? <ThumbsDown size={19} color='green' fill="green" /> : <ThumbsDown size={19} />
+                                        isUnFavouriteComments ? <ThumbsDown size={iconSize} color='green' fill="green" /> : <ThumbsDown size={iconSize} />
                                     }
                                 </span>
                                 <small>0</small>
                             </button>
-                            <button className='flex items-center gap-2'>
+                            <button className='flex items-center gap-2 text-sm md:text-[15px]'>
                                 Reply
                             </button>
                             <button className='flex items-center group relative'>
-                                <span>Share</span>
+                                <span className='text-sm md:text-[15px]'>Share</span>
                                 <span><ArrowRightSquare size={14} /></span>
                                 <div className='absolute flex items-center gap-4 left-20 w-0 group-hover:w-[300px] transition_all overflow-hidden'>
                             <button className='hover:scale-95 transition_all'><BsTwitterX /></button>

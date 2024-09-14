@@ -25,7 +25,7 @@ const BlogDetails = () => {
                     </div>
                 </div>
                 <div className='mt-6 text-center'>
-                    <img src="https://www.dochipo.com/wp-content/uploads/2020/05/banner.jpg" alt="" className='w-full h-[400px]' />
+                    <img src="https://www.dochipo.com/wp-content/uploads/2020/05/banner.jpg" alt="" className='w-full md:h-[400px]' />
                     <div className='text-center font-extralight mt-3 text-[13px]'>Image Credit: <a href="#" className='hover:underline'> made4dev.com (Premium Programming T-shirts)</a></div>
                 </div>
                 <div className='font-light text-sm text-textLight dark:text-dark-textLight tracking-wider leading-loose mt-10'>
@@ -51,22 +51,22 @@ const BlogDetails = () => {
                         <li>Aenean massa cum sociis natoque penatibus.</li>
                     </ol>
                 <div className='relative before:absolute before:-left-12 before:top-0 before:h-full before:w-[2px] before:rounded-full before:bg-black dark:before:bg-gray-400'>
-                    <h1 className='font-bold text-xl dark:text-white text-textBold mb-7'>Quote Example</h1>
+                    <h1 className='font-bold md:text-xl text-lg  dark:text-white text-textBold mb-7'>Quote Example</h1>
                     <div>
-                        <p className='text-3xl leading-10'>You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.</p>
+                        <p className='md:text-3xl text-2xl leading-10'>You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.</p>
                         <p className='flex items-center  text-xl ml-10 mt-9'><span><BsDash /></span> John Romero</p>
                     </div>
                 </div>
                 </div>
                 <div className='flex w-full mt-10 '>
-                    <Button type="button" className=' bg-sidebar_green w-full flex items-center justify-between text-white ' action={() => handleNav("left")}>
+                    <Button type="button" className=' bg-sidebar_green border-border_green w-full flex items-center justify-between text-white ' action={() => handleNav("left")}>
                         <div className='flex items-center justify-between w-[50%]'>
                             <span><ArrowLeft /></span>
                             <span>Back</span>
                         </div>
                         <div></div>
                     </Button>
-                    <Button type="button" className=' bg-sidebar_green w-full flex items-center justify-between text-white' action={() => handleNav("right")}>
+                    <Button type="button" className=' bg-sidebar_green border-border_green w-full flex items-center justify-between text-white' action={() => handleNav("right")}>
                         <div></div>
                         <div className='flex items-center justify-between w-[50%]'>
                             <span>Next</span>
