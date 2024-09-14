@@ -26,7 +26,7 @@ const BlogLists = () => {
           </button>
         ))}
       </div>
-      <div className='grid grid-cols-3 gap-x-4 gap-y-5 mt-16'>
+      <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-x-4 gap-y-5 mt-16'>
         <TransitionGroup component={null}>
           {projects.map((project, index) => (
             <CSSTransition

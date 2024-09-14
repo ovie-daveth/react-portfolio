@@ -42,20 +42,20 @@ const Comments = () => {
                             <span className='group-hover:underline'>Login</span>
                             <span><ArrowBigDown fill='black' size={16} /></span>
                         </button>
-                        <div className={`${isOpenLoginChoices ? "flex":"hidden"} flex-col gap-5 absolute top-8 right-0 bg-white shadow-md drop-shadow-md px-3 py-3 border-2 border-black rounded-r-lg rounded-l-md font-normal`} style={{borderTopRightRadius: "20px", borderTopLeftRadius: "5px", borderBottomRightRadius: "20px",}}>
-                                <button className='flex items-center gap-1'>
+                        <div className={`${isOpenLoginChoices ? "flex":"hidden"} flex-col gap-5 absolute md:top-8 top-10 right-0 bg-white shadow-md drop-shadow-md px-3 py-3 md:border-2 border-[1px] border-black rounded-r-lg rounded-l-md font-normal`} style={{borderTopRightRadius: "20px", borderTopLeftRadius: "5px", borderBottomRightRadius: "20px",}}>
+                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsTwitterX /></span>
                                     <span>Twitter</span>
                                 </button>
-                                <button className='flex items-center gap-1'>
+                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsFacebook /></span>
                                     <span>Facebook</span>
                                 </button>
-                                <button className='flex items-center gap-1'>
+                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsGoogle /></span>
                                     <span>Google</span>
                                 </button>
-                                <button className='flex items-center gap-1'>
+                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsGithub /></span>
                                     <span>Github</span>
                                 </button>

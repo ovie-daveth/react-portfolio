@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../_layout.tsx'
-import { AlignLeftIcon, ArrowBigDown, ArrowDown, ArrowLeft, ArrowRight, DotIcon, MessageCircle, QuoteIcon } from 'lucide-react'
+import { ArrowLeft, ArrowRight, DotIcon, MessageCircle, QuoteIcon } from 'lucide-react'
 import { BsDash } from 'react-icons/bs'
 import Button from '../../components/atoms/Button.tsx'
 import Comments from '../../components/blog/Comments.tsx'
@@ -13,7 +13,7 @@ const BlogDetails = () => {
   return (
     <Layout theme={false}>
       <div className='container_all'>
-            <div className='mx-auto w-[65%]'>
+            <div className='mx-auto md:w-[65%] lg:w-full'>
                 <div className='flex flex-col gap-0'>
                     <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Why Every Developer Should Have A Blog</h1>
                     <div className='text-left font-light text-textLight dark:text-dark-textLight text-[12px] flex items-center -mt-2'>
@@ -21,7 +21,7 @@ const BlogDetails = () => {
                         <span><DotIcon /></span>
                         <span>5 min read</span>
                         <span><DotIcon /></span>
-                        <a href='#' className=' hover:underline'>4 comments</a>
+                        <a href='#' className=' hover:underline'>1 comments</a>
                     </div>
                 </div>
                 <div className='mt-6 text-center'>
