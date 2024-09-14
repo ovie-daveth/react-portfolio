@@ -15,7 +15,7 @@ const BlogLists = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-center mt-10 md:gap-10 gap-6 font-normal text-gray-400 dark:text-dark-textLight'>
+      <div className='flex items-center justify-center mt-10 md:gap-10 gap-4 font-normal text-gray-400 dark:text-dark-textLight text-sm md:text-[15px]'>
         {ListItems.map((item) => (
           <button
             onClick={() => selectCategory(item.id)}

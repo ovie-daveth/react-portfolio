@@ -13,8 +13,8 @@ const Blogs = () => {
   }
   return (
     <Layout theme={false}>
-        <div className='fixed right-3 bottom-4 z-50'>
-        <Button className='bg-sidebar_green text-white border-border_green mt-5' type="submit" action={WriteBlogFunction}>
+        <div className='lg:fixed absolute right-3 lg:bottom-4 top-12 z-50'>
+        <Button className='bg-sidebar_green text-white border-border_green mt-5 text-sm md:text-[15px]' type="submit" action={WriteBlogFunction}>
             Write Blog
           </Button>
         </div>
