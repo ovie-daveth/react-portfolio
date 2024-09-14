@@ -23,7 +23,7 @@ const Toolbar = ({ editor }: Props) => {
   }
 
   return (
-    <div className="flex gap-2 p-2 border border-input bg-transparent rounded-md">
+    <div className="flex p-1 border border-input bg-transparent rounded-md w-full text-sm">
       {/* Heading 2 */}
       <Toggle
         size="sm"
@@ -32,7 +32,7 @@ const Toolbar = ({ editor }: Props) => {
           editor.chain().focus().toggleHeading({ level: 2 }).run()
         }
       >
-        <Heading2 className="h-4 w-4" />
+        <Heading2 className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Heading 3 */}
@@ -43,7 +43,7 @@ const Toolbar = ({ editor }: Props) => {
           editor.chain().focus().toggleHeading({ level: 3 }).run()
         }
       >
-        <Heading3 className="h-4 w-4" />
+        <Heading3 className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Bold */}
@@ -52,7 +52,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('bold')}
         onPressedChange={() => editor.chain().focus().toggleBold().run()}
       >
-        <Bold className="h-4 w-4" />
+        <Bold className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Italic */}
@@ -61,7 +61,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('italic')}
         onPressedChange={() => editor.chain().focus().toggleItalic().run()}
       >
-        <Italic className="h-4 w-4" />
+        <Italic className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Underline */}
@@ -70,7 +70,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('underline')}
         onPressedChange={() => editor.chain().focus().toggleUnderline().run()}
       >
-        <Underline className="h-4 w-4" />
+        <Underline className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Strikethrough */}
@@ -79,7 +79,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('strike')}
         onPressedChange={() => editor.chain().focus().toggleStrike().run()}
       >
-        <Strikethrough className="h-4 w-4" />
+        <Strikethrough className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Code */}
@@ -88,7 +88,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('code')}
         onPressedChange={() => editor.chain().focus().toggleCode().run()}
       >
-        <Code className="h-4 w-4" />
+        <Code className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       <Toggle
@@ -96,7 +96,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('link')}
         onPressedChange={setLink}
       >
-        <LinkIcon className='h-4 w-4' />
+        <LinkIcon className='md:h-4 md:w-4 w-3 h-3' />
       </Toggle>
 
       {/* Bullet List */}
@@ -105,7 +105,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('bulletList')}
         onPressedChange={() => editor.chain().focus().toggleBulletList().run()}
       >
-        <List className="h-4 w-4" />
+        <List className="md:h-4 md:w-4 w-3 h-3" />
       </Toggle>
 
       {/* Ordered List */}
@@ -114,7 +114,7 @@ const Toolbar = ({ editor }: Props) => {
         pressed={editor.isActive('orderedList')}
         onPressedChange={() => editor.chain().focus().toggleOrderedList().run()}
       >
-        <ListOrdered className={`${editor.isActive("orderedList") ? " font-bold text-lg": "font-light text-sm"} h-4 w-4`} />
+        <ListOrdered className={`${editor.isActive("orderedList") ? " font-bold text-lg": "font-light text-sm"} md:h-4 md:w-4 w-3 h-3`} />
       </Toggle>
     </div>
   )
