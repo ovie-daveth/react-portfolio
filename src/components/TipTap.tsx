@@ -41,7 +41,7 @@ const Tiptap = ({ description, onChange, name }: EditorProps) => {
   return (
     <div className='w-full'>
       {/* Toolbar with rich text actions */}
-      <Toolbar editor={editor} />
+      <div className='overflow-x-scroll scroll'><Toolbar editor={editor} /></div>
       {/* Editor content */}
       <EditorContent className='' editor={editor} name={name} />
     </div>
