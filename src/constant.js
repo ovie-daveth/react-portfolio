@@ -161,3 +161,42 @@ export const faqs = [
     answer: "Absolutely! If your project grows in scope or you need additional support, you can upgrade your package at any time. We can adjust the pricing and timeline accordingly to fit your evolving needs."
   }
 ]
+
+export const services = [
+  {
+    "header": "Package Price (negotiable)",
+    "values": ["$10/hr", "$20/hr", "$50/hr"]
+  },
+  {
+    "header": "Development Hours",
+    "values": ["Up to 10 hours of work per week", "Up to 20 hours of work per week", "Full time availability"]
+  },
+  {
+    "header": "Project Type",
+    "values": ["Bug fixes, enhancements, adding minor new features", "Mid sized features to full application development", "Full application development"]
+  },
+  {
+    "header": "Support",
+    "values": ["Basic email support (48h response)", "Priority email support(24h response)", "Full time dedicated support"]
+  },
+  {
+    "header": "Revisions",
+    "values": ["2 round revisions", "4 round revisions", "Unlimited revisions"]
+  },
+  {
+    "header": "Delivery Time",
+    "values": ["2-4 weeks", "1-3 weeks", "Based on need"]
+  },
+  {
+    "header": "Consultation",
+    "values": ["One 1-hour consultation", "one 2-hour consultation", "Unlimited consultation sessions"]
+  },
+  {
+    "header": "Remote/On-site",
+    "values": ["Remote only", "Remote with occasional video calls", "Full remote with live collaboration sessions"]
+  },
+  {
+    "header": "Project management tools",
+    "values": ["Email communication", "Email & project management tools (e.g. Trello)", "Full management via PM tools (Slack, Jira, Azure for developers, etc.)"]
+  }
+];

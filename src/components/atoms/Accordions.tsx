@@ -15,7 +15,7 @@ const Accordions = ({question, answer}: Accordion) => {
     <div>
       <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger>{question}</AccordionTrigger>
+                <AccordionTrigger className='text-left'>{question}</AccordionTrigger>
                 <AccordionContent className=' text-textLight dark:text-dark-textLight font-light'>
                   {answer}
                 </AccordionContent>

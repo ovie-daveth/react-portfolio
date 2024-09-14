@@ -2,11 +2,13 @@ import React from 'react'
 import Button from '../atoms/Button.tsx'
 import { BsArrowRightCircle } from 'react-icons/bs'
 import home from "../../assets/home_3.jpg"
+import { useNavigate } from 'react-router-dom'
 
 const Intro = () => {
 
+  const nav = useNavigate();
     const GotoPortfolio = () => {
-
+      nav("/portfolio")
     }
 
 

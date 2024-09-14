@@ -20,8 +20,8 @@ const ProjectCard = ({index}) => {
             </div>
             <div className='md:py-3 py-0 md:w-[50%] h-full'>
                 <h3 className='dark:text-white underline text-textLight'>Project Heading</h3>
-                <p className='text-sm mt-4 hidden md:block font-normal text-textLight dark:text-gray-400'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus nisi, consectetur voluptatem quibusdam.</p>
-                <div className='font-extralight text mt-4 dark:text-gray-400 hidden md:block'>
+                <p className='text-sm mt-4  font-normal text-textLight dark:text-gray-400'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus nisi, consectetur voluptatem quibusdam.</p>
+                <div className='font-extralight text mt-4 dark:text-gray-400 block'>
                     <p>Client: Frost Ai</p>
                 </div>
             </div>
