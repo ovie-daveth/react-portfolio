@@ -70,7 +70,7 @@ const WriteBlog = () => {
                         <label className={`${isUp === 2 ? " -translate-y-4" : "translate-y-0"} text-sm md:text-[15px] transition-all ease-in-out duration-300`} htmlFor="title">Blog Header</label>
                         <input value={formData.img} name="img" onChange={handleChange}  type="file" id="title" className='text-textLight dark:text-dark-textLight text-sm' />
                     </div>
-                    <div className='flex flex-col gap-2 leading-relaxed tracking-widest group w-[95%] md:w-full mx-auto'>
+                    <div className='flex flex-col gap-2 leading-relaxed tracking-widest group w-[95%] md:w-full'>
                         <label className={`${isUp === 3 ? " -translate-y-4" : "translate-y-0"} text-sm md:text-[15px] transition-all ease-in-out duration-300`} htmlFor="title">Blog</label>
                         <Tiptap description={formData.content} onChange={handleContentChange} name="content" />
                     </div>
