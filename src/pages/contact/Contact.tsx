@@ -19,9 +19,9 @@ const Contact = () => {
         <div className=' font-light'>
           <div className='bg-gray-50 dark:bg-dark-background'>
             <div className='flex items-center justify-center flex-col text-center container_all'>
-            <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Contact Me</h1>
-                  <p className='text text-textLight dark:text-dark-textLight w-[80%]'>Interested in hiring me for your project, or you want a CTO or a co-founder or just want to say hi? You can fill in the contact form below or send me an email to <a href="mailto:davethsite@gmail.com" target='_blank'>here</a></p>
-                  <p className='mt-4 text-textLight dark:text-dark-textLight'>Want to get connected? Follow me on the social channels below.</p>
+            <h1 className='font-bold md:text-3xl text-xl dark:text-white text-textBold mb-3'>Contact Me</h1>
+                  <p className='text-sm md:text-[15px] text-textLight dark:text-dark-textLight md:w-[80%]'>Interested in hiring me for your project, or you want a CTO or a co-founder or just want to say hi? You can fill in the contact form below or send me an email to <a href="mailto:davethsite@gmail.com" target='_blank' className='text-sidebar_green'>here</a></p>
+                  <p className='mt-4 text-textLight dark:text-dark-textLight text-sm md:text-[15px]'>Want to get connected? Follow me on the social channels below.</p>
                   <div className='flex items-center gap-3 mt-2'>
                   {
                     socials.map((item, index) => (
@@ -35,9 +35,9 @@ const Contact = () => {
                 </div>
             </div>
           </div>  
-          <div className='text-center mt-10 w-[60%] lg:ml-52'>
+          <div className='text-center mt-10 xl:w-[60%] lg:w-[80%] w-full mx-auto '>
             <h1 className='font-bold text-3xl dark:text-white text-textBold mb-3'>Get In Touch</h1>
-            <div className=' w-[70%] mx-auto font-normal text-textLight dark:text-dark-textLight font-n'>
+            <div className=' md:w-[70%] mx-auto font-normal text-textLight dark:text-dark-textLight font-n'>
               <form className='w-full flex flex-col gap-5'>
                 <div className='w-full flex items-start gap-2'>
                   <input className='border-[1.4px] border-gray-400 borderRadius h-10 rounded-md w-full px-5 outline-sidebar_green' type="text" placeholder='Name' />
@@ -53,7 +53,7 @@ const Contact = () => {
                       <option className='text-textLight dark:text-dark-textLight' value="fig">Fig</option>
                       <option className='text-textLight dark:text-dark-textLight' value="grape">Grape</option>
                     </select>
-                    <small className='flex items-center gap-2 text-sm font-light mt-2'>
+                    <small className='flex md:items-center gap-2 text-[12px] md:text-[15px] font-light mt-2'>
                       <span>
                         <Info size="15" color="white" fill="green" />
                       </span>
@@ -64,7 +64,7 @@ const Contact = () => {
                 <div>
                   <textarea className='border-[1.4px] border-gray-400 borderRadius rounded-md w-full h-[200px] font-light placeholder:font-light p-5 outline-sidebar_green' placeholder='Enter your message' name="" id=""></textarea>
                 </div>
-                <Button className='bg-sidebar_green text-white border-border_green flex items-center justify-center w-[20%]' type="button" action={handleSendMessage}>Send Now</Button>
+                <Button className='bg-sidebar_green text-white border-border_green flex items-center justify-center md:w-[20%]' type="button" action={handleSendMessage}>Send Now</Button>
               </form>
             </div>
           </div>
