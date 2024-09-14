@@ -15,12 +15,12 @@ const BlogLists = () => {
 
   return (
     <div>
-      <div className='flex items-center justify-center mt-10 md:gap-10 gap-2 font-normal text-gray-400 dark:text-dark-textLight'>
+      <div className='flex items-center justify-center mt-10 md:gap-10 gap-6 font-normal text-gray-400 dark:text-dark-textLight'>
         {ListItems.map((item) => (
           <button
             onClick={() => selectCategory(item.id)}
             key={item.id}
-            className={`border-t-2 ${item.id === itemId ? 'border-sidebar_green' : 'border-transparent'} px-4 pt-2`}
+            className={`border-t-2 ${item.id === itemId ? 'border-sidebar_green' : 'border-transparent'} md:px-4 pt-2`}
           >
             {item.title}
           </button>
