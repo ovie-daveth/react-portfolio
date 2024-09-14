@@ -3,6 +3,7 @@ import BlogCard from './BlogCard.tsx'
 import Button from '../atoms/Button.tsx'
 import { BsArrowRightCircleFill } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
+import TypingText from '../../lib/TypingText.tsx'
 
 const FeaturedBlog = () => {
 
@@ -13,7 +14,7 @@ const FeaturedBlog = () => {
   return (
     <div>
       <div className='container_all'>
-        <h1 className='header'>Latest Blogs</h1>
+      <TypingText text='Latest Blogs' className='header' />
         <div className='mt-16 grid xl:grid-cols-3 lg:grid-cols-2 gap-x-5 gap-y-5 px-2 md:px-[unset]'>
           {
             [Array(1,2,3).map((_, i) => (

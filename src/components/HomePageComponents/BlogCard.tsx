@@ -2,10 +2,15 @@ import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import code from "../../assets/cssframe.jpg";
 import css from "../../assets/frame.jpg";
+import useCardInView from '../../lib/useCardInView.ts';
 
 const BlogCard = ({index}) => {
+
+  const { ref: CardRef, inView: CardInView } = useCardInView();
   return (
-    <div className='w-[100%]/3 bg-card_bg dark:bg-dark-card_bg'>
+    <div ref={CardRef} className={`w-[100%]/3 bg-card_bg dark:bg-dark-card_bg transition-transform  duration-1000 ${
+      CardInView ? 'translate-x-0 opacity-100' : (index % 2 === 0 ? "translate-x-20 opacity-0" : "-translate-x-20 opacity-0")
+    }`}>
       <div className='w-full md:h-[300px] h-[200px]'>
       <img src={index % 2 === 0 ? code : css} alt="" className="object-cover h-full w-full" />
       </div>

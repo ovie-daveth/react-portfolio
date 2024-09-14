@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../atoms/Button.tsx'
 import { Stacks } from '../../constant.js'
 import { useNavigate } from 'react-router-dom'
+import useTypingEffect from '../../lib/TypingText.tsx'
+import useCardInView from '../../lib/useCardInView.ts'
+import Typewriter from 'react-typewriter-effect';
+import TypingText from '../../lib/TypingText.tsx'
 
 const About = () => {
     
@@ -9,10 +13,11 @@ const About = () => {
     const navigateTo = () => {
         nav("/services")
     }
+
   return (
     <div className='container_all'>
         <div>
-            <h1 className='header'>What I do</h1>
+            <TypingText text='What I do' className='header' />
             <p className='mt-6 font-normal text-textLight dark:text-dark-textLight'>I have more than 5 years' experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my <a className='text-sidebar_green hover:underline' href="/">online resume</a> and project <a className='text-sidebar_green hover:underline' href="/">portfolio</a>.</p>
         </div>
         <div className='grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-x-5 gap-y-10 mt-16'>

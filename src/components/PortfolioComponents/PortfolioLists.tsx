@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ProjectCard from '../HomePageComponents/ProjectCard.tsx';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { ListItems } from '../../constant.js';
 
 const PortfolioLists = () => {

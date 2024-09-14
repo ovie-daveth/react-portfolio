@@ -3,18 +3,25 @@ import { BsEye } from 'react-icons/bs'
 import code from '../../assets/cssframe.jpg'
 import css from "../../assets/frame.jpg"
 import { useNavigate } from 'react-router-dom'
+import useCardInView from '../../lib/useCardInView.ts';
 
 
 const ProjectCard = ({index}) => {
+
+    const { ref: CardRef, inView: CardInView } = useCardInView();
 
     const navigate = useNavigate();
     const gotoProjectDetails = (itemId: number) => {
         navigate(`/portfolio/${itemId}`);
         //window.location.replace(`//portfolio/${itemId}`);
     }
+
+
   return (
-    <div className={`dark:bg-dark-card_bg bg-card_bg relative before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:bg-transparent  hover:before:bg-black/30 hover:dark:before:bg-black/50 group transition-all before:transition-all before:ease-in-out before:duration-500`}>    
-        <div className='w-full h-fit flex md:flex-row flex-col items-start gap-8'>
+    <div  ref={CardRef} className={`dark:bg-dark-card_bg bg-card_bg relative before:absolute before:left-0 before:right-0 before:top-0 before:h-full before:bg-transparent  hover:before:bg-black/30 hover:dark:before:bg-black/50 group transition-all before:transition-all before:ease-in-out before:duration-500 duration-1000 ${
+      CardInView ? 'translate-x-0 opacity-100' : (index % 2 === 0 ? "translate-x-20 opacity-0" : "-translate-x-20 opacity-0")
+    }`}>    
+        <div className='w-full h-fit flex md:flex-row flex-col items-start gap-8  '>
             <div className={`md:w-[40%] w-full h-full`}>
                 <img className='object-cover w-full md:h-[300px] h-[200px]' src={index % 3 == 1 ? code : css} alt="" />
             </div>

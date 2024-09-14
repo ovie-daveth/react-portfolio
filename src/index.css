@@ -6,7 +6,7 @@
 
 
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: "Arial", sans-serif;
     font-weight: 700;
     font-style: normal;
     overflow-x: hidden;
@@ -52,3 +52,22 @@ code {
   .borderRadius{
     border-radius: 8px;
   }
+
+  .typing-container {
+    display: inline-block;
+    white-space: wrap;
+    overflow: hidden;
+    border-right: 0.15em solid #333;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #333 }
+  }
+  

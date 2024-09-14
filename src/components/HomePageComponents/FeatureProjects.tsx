@@ -1,18 +1,21 @@
 import React from 'react'
 import ProjectCard from './ProjectCard.tsx'
 import Button from '../atoms/Button.tsx'
-import { BsArrowRightCircle, BsArrowRightCircleFill } from 'react-icons/bs'
+import { BsArrowRightCircleFill } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
 
 const FeatureProjects = () => {
 
+    const nav = useNavigate();
     const goToPortfolio = () => {
-
+      nav("/portfolio")
     }
+
   return (
     <div className='container_all'>
       <div className='flex flex-col justify-center'> 
-        <h1 className='header'>Featured Project</h1>
-        <div className='mt-16 grid md:grid-cols-2 gap-x-8 gap-y-6 px-2 md:px-[unset]'>
+        <h1 className='header hidden md:block'>Featured Project</h1>
+        <div className='md:mt-16 grid md:grid-cols-2 gap-x-8 gap-y-6 px-2 md:px-[unset]'>
             {
                 [Array(1,2,3,4,5,).map((_, i) => (
                     <ProjectCard key={i} index={i} />
