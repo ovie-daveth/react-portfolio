@@ -1,6 +1,8 @@
 import { ArrowBigDown, ArrowRightSquare, Dot, FacebookIcon, Flag, Heart, Link2, Link2Icon, Linkedin, MessageCircle, MoveRight, ThumbsDown, ThumbsUp } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { BsDash, BsFacebook, BsGithub, BsGoogle, BsPass, BsPersonAdd, BsPersonFillAdd, BsTwitter, BsTwitterX } from 'react-icons/bs'
+import { useFirebaseAuth } from '../../apis/useFirebaseAuth.ts';
+import { useAuth } from "../../states/useAuth.tsx"; 
 
 const Comments = () => {
 
@@ -11,6 +13,8 @@ const Comments = () => {
     const [isFavouriteComments, setIsFavouriteComments] = useState(false);
     const [isUnFavouriteComments, setUnIsFavouriteComments] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(0)
+
+    const { signInWithGoogle, signInWithGithub, user } = useFirebaseAuth();
 
     const ChooseLogin = () => {
         setIsOpenLoginhoices(!isOpenLoginChoices)
@@ -59,7 +63,9 @@ const Comments = () => {
     <div className='mt-10'>
         <div className='flex items-center justify-between border-b-[4px] pb-2 relative'>
                         <p>{1} Comment</p>
-                        <button onClick={ChooseLogin} className='flex items-center gap-1 font-light group relative'>  
+                        {
+                            !user ? <>
+                                <button onClick={ChooseLogin} className='flex items-center gap-1 font-light group relative'>  
                             <span className='group-hover:underline'>Login</span>
                             <span><ArrowBigDown fill='black' size={iconSize} /></span>
                         </button>
@@ -72,15 +78,17 @@ const Comments = () => {
                                     <span><BsFacebook /></span>
                                     <span>Facebook</span>
                                 </button>
-                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
+                                <button onClick={signInWithGoogle} className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsGoogle /></span>
                                     <span>Google</span>
                                 </button>
-                                <button className='flex items-center gap-1 text-sm md:text-[14px]'>
+                                <button onClick={signInWithGithub} className='flex items-center gap-1 text-sm md:text-[14px]'>
                                     <span><BsGithub /></span>
                                     <span>Github</span>
                                 </button>
                         </div>
+                            </> : <p>Welcome {user.displayName}!</p>
+                        }
         </div>
         <div className='flex items-start gap-10 mt-7'>
             <div className='bg-sidebar_green text-white md:py-3 py-1 md:px-4 px-2 rounded-lg md:text-3xl text-xl'>

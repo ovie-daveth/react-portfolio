@@ -1,16 +1,48 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import {ListItems} from "../../constant.js"
 import BlogCard from '../HomePageComponents/BlogCard.tsx';
+import {  collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase.js'
+
+const range = (start: number, end: number) => {
+  return Array.from({ length: end - start + 1 }, (_, i) => i + start);
+};
+
+interface Blog{
+  id:string
+  blogtype: string,
+  content: string,
+  img: string,
+  title: string
+}
 
 const BlogLists = () => {
-  const [itemId, setItem] = useState(1);
-  const [projects, setProjects] = useState([1, 2, 3, 4, 5, 6]);
+  const [itemId, setItem] = useState(1)
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [projects, setProjects] = useState<number[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+        try {
+            const querySnapshot = await getDocs(collection(db, "blogs"));
+            const blogList: any[] = [];
+            querySnapshot.forEach((doc) => {
+                blogList.push({ id: doc.id, ...doc.data() });
+            });
+            setBlogs(blogList);
+            console.log(blogList)
+        } catch (error) {
+            console.error("Error fetching blogs: ", error);
+        }
+    };
+
+    fetchBlogs();
+}, [db]);
 
   const selectCategory = (item: number) => {
     setItem(item);
-    // Here, you might filter projects based on the category.
-    setProjects([1, 2, 3, 4, 5, 6]); // Simulate reshuffling
+    setProjects(range(1, blogs.length));
   };
 
   return (
@@ -28,14 +60,14 @@ const BlogLists = () => {
       </div>
       <div className='grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-x-4 gap-y-5 mt-16'>
         <TransitionGroup component={null}>
-          {projects.map((project, index) => (
+          {blogs.map((project, index) => (
             <CSSTransition
               key={index}
               timeout={500}
               classNames='project'
             >
               <div>
-                <BlogCard index={index} />
+                <BlogCard data={project} index={index} />
               </div>
             </CSSTransition>
           ))}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../../_layout.tsx'
 import BlogLists from '../../components/blog/BlogList.tsx'
 import Button from '../../components/atoms/Button.tsx'
@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import TypingTest from "../../lib/TypingText.tsx"
 
 const Blogs = () => {
+
 
   const navigate = useNavigate()
   const WriteBlogFunction = () => {
