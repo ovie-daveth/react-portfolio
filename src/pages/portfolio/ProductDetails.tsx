@@ -38,7 +38,7 @@ const ProductDetails = () => {
       </div>
       <div className='mt-16'>
       <h3 className='md:text-2xl text-lg text-textBold dark:text-dark-textBold font-semibold mb-2'>The Results</h3>
-      <div className='flex flex-wrap gap-5'>
+      <div className='grid gap-3 md:grid-cols-3 grid-cols-1'>
         {
           [Array(1,2,3).map((_, i) => (
             <div className='py-5 px-5 rounded-md dark:bg-dark-card_bg bg-card_bg'>

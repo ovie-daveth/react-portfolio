@@ -27,7 +27,7 @@ body{
     @apply md:text-3xl text-xl dark:text-white relative before:absolute before:-left-6 before:top-0 before:h-full before:w-2 before:bg-sidebar_green
 }
 .container_all{
-    @apply xl:px-40 lg:pl-32 lg:pr-28 md:px-5 py-12 mt-10 
+    @apply xl:px-40 lg:pl-32 lg:pr-28 md:px-5 py-2 mt-7 
 }
 
 .transition_all {
