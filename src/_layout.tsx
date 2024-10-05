@@ -25,7 +25,7 @@ const Layout = ({ children, theme }: LayoutType) => {
             <div className="flex items-start">
                 {/* Side Bar */}
                 {/* Laptop view */}
-                <div className="lg:w-[280px] hidden lg:block top-0 left-0 fixed h-screen">
+                <div className="lg:w-[320px] hidden lg:block top-0 left-0 fixed scroll overflow-y-scroll h-screen">
                     <SideBar />
                 </div>
 
