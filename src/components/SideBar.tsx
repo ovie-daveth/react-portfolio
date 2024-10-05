@@ -7,7 +7,7 @@ import { useTheme } from '../states/themeActions';
 import home from "../assets/home_4.jpg";
 const SideBar = () => {
 
-
+ 
   const { theme, toggleTheme, isLightTheme } = useTheme();
   const [path, setPath] = useState<string>("");
 
@@ -24,12 +24,12 @@ const SideBar = () => {
                   <div className='w-36 h-32  rounded-full bg-white/50'>
                     <img className='w-full h-full rounded-full object-cover' src={home} alt="" />
                   </div>
-                  <p className='mt-3 font-normal'>Hi, my name is Omokefe David and I'm a senior software engineer. Welcome to my personal website!</p>
+                  <p className='mt-3 font-normal text-sm'>Hi, my name is Omokefe David and I'm a senior software engineer. Welcome to my personal website!</p>
               </div>
               <div className='flex items-center gap-3 mt-5'>
                 {
                   socials.map((item, index) => (
-                    <div key={index} className='bg-[#0000004D] dark:bg-sidebar_green text-white dark:text-white h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95'>
+                    <div key={index} className='bg-[#0000004D] dark:bg-sidebar_green text-white dark:text-white h-8 w-8 rounded-full flex items-center justify-center cursor-pointer hover:scale-95 text-sm'>
                   <Link to={item.href}>
                   {item.icon}
                   </Link>
@@ -41,7 +41,7 @@ const SideBar = () => {
               {
                   menus.map((item, index) => (
                     <div key={index} className={` flex justify-center cursor-pointer hover:scale-95 ${path == item.href && "text-textLight dark:text-sidebar_green"}`}>
-                  <Link to={item.href} className='flex items-center gap-2'>
+                  <Link to={item.href} className='flex items-center gap-2 text-sm'>
                       <span className='text-lg'>{item.icons}</span>
                       <span>{item.menu}</span>
                   </Link>

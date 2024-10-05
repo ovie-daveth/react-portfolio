@@ -30,7 +30,7 @@ const WriteBlog = () => {
         }, 2000);
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: any) => {
         const { name, value, files } = e.target;
         if (name === "file" && files) {
             setSelectedFile(files[0]);
@@ -163,8 +163,8 @@ const WriteBlog = () => {
                             <Button
                                 className='bg-sidebar_green text-white border-border_green mt-5 text-sm md:text-[15px]'
                                 type="submit"
-                                disabled={uploading}
-                            >
+                                disabled={uploading} 
+                                action={() => {""}}                           >
                                 {uploading ? 'Posting...' : 'Post Blog'}
                             </Button>
                         </div>

@@ -64,7 +64,7 @@ const Contact = () => {
                 <div>
                   <textarea className='border-[1.4px] border-gray-400 borderRadius rounded-md w-full h-[200px] font-light placeholder:font-light p-5 outline-sidebar_green' placeholder='Enter your message' name="" id=""></textarea>
                 </div>
-                <Button className='bg-sidebar_green text-white border-border_green flex items-center justify-center md:w-[20%]' type="button" action={handleSendMessage}>Send Now</Button>
+                <Button className='bg-sidebar_green text-white border-border_green flex items-center justify-center md:w-[50%] w-[100%]' type="button" action={handleSendMessage}>Send Now</Button>
               </form>
             </div>
           </div>
