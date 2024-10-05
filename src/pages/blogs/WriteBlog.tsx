@@ -104,9 +104,9 @@ const WriteBlog = () => {
                                     <option
                                         className='cursor-pointer'
                                         key={item.id}
-                                        value={item.title}
+                                        value={item?.title}
                                     >
-                                        {item.title.toLowerCase() === "all" ? "Select Blog Type" : item.title}
+                                        {item?.title?.toLowerCase() === "all" ? "Select Blog Type" : item?.title}
                                     </option>
                                 ))}
                             </select>
@@ -121,7 +121,7 @@ const WriteBlog = () => {
                                 Title
                             </label>
                             <input
-                                value={formData.title}
+                                value={formData?.title}
                                 name="title"
                                 onChange={handleChange}
                                 onKeyDown={() => animateUp(1)}
@@ -154,7 +154,7 @@ const WriteBlog = () => {
                                 Blog Content
                             </label>
                             <Tiptap
-                                description={formData.content}
+                                description={formData?.content}
                                 onChange={handleContentChange}
                                 name="content"
                             />

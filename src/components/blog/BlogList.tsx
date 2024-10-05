@@ -54,7 +54,7 @@ const BlogLists = () => {
             key={item.id}
             className={`border-t-2 ${item.id === itemId ? 'border-sidebar_green' : 'border-transparent'} md:px-4 pt-2`}
           >
-            {item.title}
+            {item?.title}
           </button>
         ))}
       </div>

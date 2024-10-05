@@ -17,11 +17,11 @@ const PortfolioLists = () => {
       <div className='flex items-center justify-center mt-10 md:gap-10 px-5 md:px-[unset] font-normal text-gray-400 dark:text-dark-textLight'>
         {ListItems.map((item) => (
           <button
-            onClick={() => selectCategory(item.id)}
+            onClick={() => selectCategory(item?.id)}
             key={item.id}
             className={`border-t-2 ${item.id === itemId ? 'border-sidebar_green' : 'border-transparent'} md:px-4 px-2 pt-2 text-sm md:text-[16px] font-semibold`}
           >
-            {item.title}
+            {item?.title}
           </button>
         ))}
       </div>

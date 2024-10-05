@@ -36,7 +36,7 @@ const About = () => {
                             </div> : <div className='bg-sidebar_green  h-9 w-9 text-textBold relative rounded-sm'>
                                 <p className='absolute -bottom-1 right-1 text-lg '>JS</p>
                             </div>}
-                            <p className='mt-2 text-textBold dark:text-dark-textBold'>{item.title}</p>
+                            <p className='mt-2 text-textBold dark:text-dark-textBold'>{item?.title}</p>
                             </div>
                         <p className='text-sm md:text-[16px] font-normal text-textLight dark:text-dark-textLight' dangerouslySetInnerHTML={{ __html: item.desc }}>    
                         </p>
